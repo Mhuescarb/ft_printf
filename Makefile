@@ -6,30 +6,27 @@
 #    By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/14 11:29:19 by mhuescar          #+#    #+#              #
-#    Updated: 2025/01/14 17:19:57 by mhuescar         ###   ########.fr        #
+#    Updated: 2025/01/15 16:04:24 by mhuescar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprint.a
+NAME = libftprintf.a
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 AR = ar
 ARFLAGS = rcs
 
-SRCS = 
+SRCS = ft_putchar.c ft_putstr.c
 
 
-
-
-
-
-
-
+INCLUDE = ft_printf.h
 
 
 
 OBJS = $(SRCS:.c=.o)
+
+
 BOBJS = $(BSRCS:.c=.o)
 
 all: $(NAME)

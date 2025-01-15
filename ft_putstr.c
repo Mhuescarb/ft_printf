@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/14 11:05:52 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/01/15 11:32:44 by mhuescar         ###   ########.fr       */
+/*   Created: 2025/01/15 10:21:33 by mhuescar          #+#    #+#             */
+/*   Updated: 2025/01/15 15:53:20 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+/* #include "ft_printf.h" */
+#include <unistd.h>
 
-# include <unistd.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <stdarg.h>
+int	ft_putstr(char *s)
+{
+	int	i;
 
-int				ft_putchar(int c);
-int				ft_putstr(char *s);
+	i = 0;
+	if (!*s)
+		return (-1);
+	while (s[i] != '\0')
+	{
+		write (1, &s[i], 1);
+		i++;
+	}
+	return (i);
+}
 
-#endif
+ /*int main ()
+{
+ft_putstr ("hola maricarmen");
+return (0);
+}
+*/
