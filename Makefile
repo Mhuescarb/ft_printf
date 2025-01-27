@@ -6,7 +6,7 @@
 #    By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/14 11:29:19 by mhuescar          #+#    #+#              #
-#    Updated: 2025/01/16 11:25:01 by mhuescar         ###   ########.fr        #
+#    Updated: 2025/01/27 18:41:53 by mhuescar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,25 +17,17 @@ CFLAGS = -Wall -Werror -Wextra
 AR = ar
 ARFLAGS = rcs
 
-SRCS = ft_putchar.c ft_putstr.c
+SRCS = ft_putchar.c ft_putstr.c ft_unsigned.c
 
 
-INCLUDE =
-
-
+INCLUDE = ft_printf.h
 
 OBJS = $(SRCS:.c=.o)
-
-
-BOBJS = $(BSRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
-
-bonus: $(OBJS) $(BOBJS)
-	$(AR) -r $(NAME) $?
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

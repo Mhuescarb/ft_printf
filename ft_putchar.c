@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:04:17 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/01/15 14:24:02 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/01/27 16:35:51 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	ft_putchar(int c)
 	return (1);
 }
 
-/* 
-int	main(void)
+/* int	main (void)
 {
-	ft_putchar ('o');
-	return (0);
+ft_putchar ('a');
+
+return (0);
 }
 */
