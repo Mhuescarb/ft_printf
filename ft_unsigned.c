@@ -6,27 +6,31 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:03:19 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/01/28 18:31:42 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/01/29 15:13:02 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h" 
 #include <unistd.h>
 
-static	int	int_max(int n)
+/*static	int	int_max(int n)
 {
 	(void)n;
 	if (write(1, "4294967295", 10) != 10)
 		return (-1);
 	return (10);
 }
+*/
+
 unsigned int	ft_unsigned(unsigned int num)
+
 {
 	int	count;
 
 	count = 0;
-	if (num >= 4294967295)
-		return(int_max(num));
+	/*if (num >= 4294967295)
+		return (int_max(num));
+		*/
 	if (num > 9)
 	{
 		count = ft_unsigned (num / 10);
@@ -66,4 +70,3 @@ unsigned int	ft_unsigned(unsigned int num)
 
     return 0;
 }
-
