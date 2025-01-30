@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_point_hexa.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/14 17:04:17 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/01/30 16:54:37 by mhuescar         ###   ########.fr       */
+/*   Created: 2025/01/30 16:27:27 by mhuescar          #+#    #+#             */
+/*   Updated: 2025/01/30 17:30:26 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <unistd.h>
 
-int	ft_putchar(int c)
-
+static int hexa_convert(char *hexa, unsigned long long n, int c)
 {
-	if (write (1, &c, 1) != 1)
-		return (-1);
-	return (1);
+unsigned long long	h;
+
+    h = ft_strlen(hexa);
+
+if (n >= h) 
+{
+	{
+		c = hexa_convert(hexa, n / h, c);
+		if (c == -1)
+			return (-1);
+		if (write (1, &hexa[n % h], 1) == -1)
+			return (-1);
+		c++;
+	}
 }
 
-/* int	main (void)
-{
-ft_putchar ('a');
-
-return (0);
 }
-*/
