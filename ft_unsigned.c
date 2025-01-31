@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:03:19 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/01/30 16:54:25 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/01/31 17:10:11 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ unsigned int	ft_unsigned(unsigned int num)
 	int	count;
 
 	count = 0;
-	
 	if (num > 9)
 	{
 		count = ft_unsigned (num / 10);
