@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 16:27:27 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/01/31 17:40:58 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/03 17:02:54 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@ static int	hexa_convert(char *hexa, unsigned long long n, int c)
 {
 	unsigned long long	h;
 
-	h = ft_strlen(hexa);
+	h = 16;
 	if (n >= h)
 	{
-		{
+		
 			c = hexa_convert(hexa, n / h, c);
 			if (c == -1)
 				return (-1);
 			if (write (1, &hexa[n % h], 1) == -1)
 				return (-1);
 			c++;
-		}
 	}
+	
 	else if (n < h)
 	{
 		if (write (1, &hexa[n], 1) == -1) /* siempre va a ser 1 char del 1 al -15 */
@@ -53,7 +53,7 @@ int	ft_point_hexa(void *p)
 	count += 2;
 	return (count);
 }
-/* int	main ()
+ int	main ()
 {
 	int	x;
 	int	*p;
@@ -65,4 +65,3 @@ int	ft_point_hexa(void *p)
 	printf ("\nCaracteres escritos: %d \n", result);
 	return 0;
 }
-*/
