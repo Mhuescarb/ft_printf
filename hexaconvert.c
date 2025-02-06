@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point_hexa.c                                    :+:      :+:    :+:   */
+/*   hexaconvertest.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 16:27:27 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/03 17:02:54 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/06 11:59:46 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "ft_printf.h"
-#include <stdio.h>
 
 static int	hexa_convert(char *hexa, unsigned long long n, int c)
 {
@@ -31,12 +31,13 @@ static int	hexa_convert(char *hexa, unsigned long long n, int c)
 	
 	else if (n < h)
 	{
-		if (write (1, &hexa[n], 1) == -1) /* siempre va a ser 1 char del 1 al -15 */
+		if (write (1, &hexa[n], 1) == -1) // siempre va a ser 1 char del 1 al -15 
 			return (-1);
 		c++;
 	}
 	return (c);
 }
+/*
 
 int	ft_point_hexa(void *p)
 {
@@ -51,17 +52,19 @@ int	ft_point_hexa(void *p)
 	if (count == -1)
 		return (-1);
 	count += 2;
-	return (count);
+	return (count +2);
 }
  int	main ()
 {
 	int	x;
 	int	*p;
 
-	x = 42;
+	x = 2;
 	p = &x;
 
 	int result = ft_point_hexa(p);
 	printf ("\nCaracteres escritos: %d \n", result);
 	return 0;
 }
+
+*/

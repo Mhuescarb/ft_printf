@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hexa_min.c                                      :+:      :+:    :+:   */
+/*   ft_hexa_point.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/03 17:33:49 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/06 14:41:10 by mhuescar         ###   ########.fr       */
+/*   Created: 2025/02/06 12:36:03 by mhuescar          #+#    #+#             */
+/*   Updated: 2025/02/06 14:41:22 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hexa_min (unsigned long long n, int *count)
+void	ft_hexa_point(unsigned long long pointer, int *count)
 {
-	char *hexchar;
-
-	hexchar = "0123456789abcdef";
-	if (n >= 16)
-		ft_hexa_min( n / 16, count );
-	ft_putchar(hexchar[n % 16], count);
-	return (*count);
+	if (!pointer)
+	{
+		write(1, "(NULL)", 6);
+		*count += 6;
+	}
+	write(1, "0x", 2);
+	*count += 2;
+	ft_hexa_min(pointer, count);
 }
-
- /*int main()
+ int main()
 {
-    unsigned long long number = 42;
+    unsigned long long pointer = 42;
     int count = 0;
 
-    ft_hexa_min(number, &count);
+    ft_hexa_point(pointer, &count);
 	
     return 0;
-}*/
+}

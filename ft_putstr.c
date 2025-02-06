@@ -6,16 +6,13 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 10:21:33 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/01/28 18:31:44 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/06 11:44:52 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "ft_printf.h" */
-#include <unistd.h>
-#include <stdio.h>
+#include "ft_printf.h"
 
 int	ft_putstr(char *s)
-
 {
 	size_t	i;
 
@@ -35,7 +32,8 @@ int	ft_putstr(char *s)
 	return (i);
 }
 
-/* int main (void)
+ /*
+ int main (void)
 {
 char *s = "holahola";
 
