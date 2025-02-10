@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 17:04:17 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/06 14:41:17 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/10 15:11:09 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putchar(char c, int *count)
 	*count += 1;
 }
 
-/*int	main (void)
+/* int	main (void)
 {
 	int	count;
 

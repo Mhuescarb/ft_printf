@@ -6,7 +6,7 @@
 #    By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/14 11:29:19 by mhuescar          #+#    #+#              #
-#    Updated: 2025/02/06 14:41:29 by mhuescar         ###   ########.fr        #
+#    Updated: 2025/02/10 17:32:06 by mhuescar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ CFLAGS = -Wall -Werror -Wextra
 AR = ar
 ARFLAGS = rcs
 
-SRCS = ft_putchar.c ft_putstr.c ft_hexa_point.c ft_putnbr.c ft_unsigned.c \
- ft_strlen.c
+SRCS = ft_putchar.c ft_putstr.c ft_hexa_min.c ft_hexa_may.c ft_hexa_point.c\
+ ft_strlen.c ft_putnbr.c ft_unsigned.c 
 
 INCLUDE = ft_printf.h
 
@@ -39,5 +39,9 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+test: all 
+	cc -Wall -Werror -Wextra *.c libftprintf.a -o test
+	./test 
 
 .PHONY : all bonus clean fclean re

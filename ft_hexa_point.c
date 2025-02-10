@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 12:36:03 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/06 14:41:22 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/10 17:49:05 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,21 @@ void	ft_hexa_point(unsigned long long pointer, int *count)
 	*count += 2;
 	ft_hexa_min(pointer, count);
 }
- int main()
+ /*
+repasar los dos resultados del main, no devuelven lo mismo
+ int main() 
 {
-    unsigned long long pointer = 42;
+    unsigned long long pointer = 17;
     int count = 0;
 
     ft_hexa_point(pointer, &count);
 	
+
+	int	x = 17;
+	int *ptr = &x;
+	printf("\n Hexa_address: %p, value %d", ptr,*ptr);
+	
     return 0;
 }
+*/
+	

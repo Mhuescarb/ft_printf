@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_hexa_may.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 10:21:33 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/10 15:45:22 by mhuescar         ###   ########.fr       */
+/*   Created: 2025/02/10 16:14:15 by mhuescar          #+#    #+#             */
+/*   Updated: 2025/02/10 17:49:22 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(char *s, int *count)
+int	ft_hexa_may(unsigned long long n, int *count)
+
 {
-	if (!s)
-	{
-		/*ft_putstr("NULL", count);
-		return ;*/
-		write(1, "NULL", 4 != 4);
-		return ;
-	}
-	if (*s == '\0')
-		return ;
-	ft_putchar(*s, count);
-	ft_putstr(s + 1, count);
+	char	*hexchar;
+
+	hexchar = "0123456789ABCDEF";
+	if (n >= 16)
+		ft_hexa_may(n / 16, count);
+	ft_putchar(hexchar[n % 16], count);
+	return (*count);
 }
-
-/*int main (void)
+/*int main(void)
 {
-char *s = "Maricarmen";
-int count = 0;
+	unsigned long long number = 11123;
+	int count = 0;
+		
+	ft_hexa_may(number, &count);
+			printf( "\n Hexaresult: %X", 11123);
+			
+			return 0;
 
-ft_putstr(s, &count);
-printf("\nSe escribieron %d caracteres.\n", count); 
-
-return 0;
 }
 */
