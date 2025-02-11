@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 12:36:03 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/10 17:49:05 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/11 16:27:10 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,23 @@ void	ft_hexa_point(unsigned long long pointer, int *count)
 	*count += 2;
 	ft_hexa_min(pointer, count);
 }
- /*
-repasar los dos resultados del main, no devuelven lo mismo
- int main() 
+
+/*
+ 
+int main() 
 {
     unsigned long long pointer = 17;
+
     int count = 0;
+	printf("\n Usando ft_printf");
 
     ft_hexa_point(pointer, &count);
-	
+    printf("\nTotal caracteres impresos con ft_hexa_point: %d\n", count);
 
-	int	x = 17;
-	int *ptr = &x;
-	printf("\n Hexa_address: %p, value %d", ptr,*ptr);
-	
+    printf("%p", (void*)pointer);
+    printf(" Usando printf:");
+
+
     return 0;
 }
 */
-	

@@ -6,65 +6,42 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:03:19 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/01/31 17:10:11 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/11 15:15:40 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h" 
-#include <unistd.h>
 
-/*static	int	int_max(int n)
+void	ft_unsigned(unsigned int n, int *count)
 {
-	(void)n;
-	if (write(1, "4294967295", 10) != 10)
-		return (-1);
-	return (10);
-}
-*/
-
-unsigned int	ft_unsigned(unsigned int num)
-
-{
-	int	count;
-
-	count = 0;
-	if (num > 9)
+	if (n > 9)
 	{
-		count = ft_unsigned (num / 10);
-		if (count == -1)
-			return (-1);
-		num = num % 10;
+		ft_unsigned (n / 10, count);
+		ft_unsigned (n % 10, count);
 	}
-	if (num <= 9)
+	else
 	{
-		if (ft_putchar(('0' + num)) == -1)
-			return (-1);
-		count++;
+		ft_putchar(n + '0', count);
 	}
-	return (count);
 }
 
-/* int main(void)
+/*int main()
 {
-    unsigned int num1 = 1230998000;
-    unsigned int num2 = 4294967295;
-    unsigned int num3 = 9;
-    unsigned int num4 = 0;
+    int count = 0;
+    unsigned int num = 12345;
 
-    printf("Probando ft_unsigned:\n");
+	printf("\n Usando ft_printf");
+    ft_unsigned(num, &count);
+	printf("/Dígitos escritos: %d\n", count);
+	
 
-    printf("\nNúmero: %u\n", num1);
-    printf(" Dígitos escritos: %u\n", ft_unsigned(num1));
+	printf( "\n%u", num);
+	printf(" Usando printf");
 
-    printf("\nNúmero: %u\n", num2);
-    printf(" Dígitos escritos: %u\n", ft_unsigned(4294967295));
 
-    printf("\nNúmero: %u\n", num3);
-    printf(" Dígitos escritos: %u\n", ft_unsigned(num3));
-
-    printf("\nNúmero: %u\n", num4);
-    printf(" Dígitos escritos: %u\n", ft_unsigned(num4));
+    // Usamos printf para imprimir el contador de caracteres
+    printf("/Dígitos escritos: %d\n", count);
 
     return 0;
 }
-*/
+	*/
