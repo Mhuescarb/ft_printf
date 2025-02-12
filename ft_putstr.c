@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 10:21:33 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/10 15:45:22 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/12 15:58:40 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ void	ft_putstr(char *s, int *count)
 {
 	if (!s)
 	{
-		/*ft_putstr("NULL", count);
-		return ;*/
-		write(1, "NULL", 4 != 4);
+		ft_putstr("NULL", count);
 		return ;
 	}
 	if (*s == '\0')
