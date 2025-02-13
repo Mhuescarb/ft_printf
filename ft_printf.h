@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 11:05:52 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/12 16:04:19 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/12 19:35:08 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdarg.h>
 
 void			ft_putchar(char c, int *count);
-void			ft_putstr(char *s, int *count);
+void			ft_putstr(char *str, int *count);
 void			ft_hexa_min(unsigned long long n, int *count);
 void			ft_hexa_may(unsigned long long n, int *count);
 void			ft_hexa_point(unsigned long long pointer, int *count);

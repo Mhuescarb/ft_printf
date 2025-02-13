@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 12:36:03 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/11 16:27:10 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/12 20:29:52 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ void	ft_hexa_point(unsigned long long pointer, int *count)
 {
 	if (!pointer)
 	{
-		write(1, "(NULL)", 6);
-		*count += 6;
+		write(1, "(nil)", 5);
+		*count += 5;
+		return;
 	}
 	write(1, "0x", 2);
 	*count += 2;
