@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+/*#include "ft_printf.h"
 int main()
 {
     unsigned long long pointer = 17;
@@ -12,4 +12,4 @@ int main()
 	printf("\n Hexa_address: %x, value %d", ptr,*ptr);
 	
     return 0;
-}
+}*/

@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 15:55:21 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/12 20:35:49 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:36:27 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ static	void	ft_format(char s, va_list args, int *count)
 	else if (s == 'u')
 		ft_unsigned(va_arg(args, unsigned int), count);
 	else if (s == 'x')
-		ft_hexa_min(va_arg(args, int), count);
+		ft_hexa_min(va_arg(args, unsigned int), count);
 	else if (s == 'X')
-		ft_hexa_may(va_arg(args, int), count);
+		ft_hexa_may(va_arg(args, unsigned int), count);
 	else if (s == '%')
 		ft_putchar('%', count);
 	else
 		ft_putchar(s, count);
 }
 
-int	ft_printf(const char *format, ...)
+int	ft_printf(char const *format, ...)
 {
 	va_list	args;
 	int		i;
@@ -62,7 +62,6 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
- #include "ft_printf.h"
 
 int main()
 {
@@ -77,7 +76,7 @@ int main()
     printf("Printed characters: %d\n\n", printed_chars);
 
     // Ejemplo 3: Con múltiples especificadores de formato
-    printed_chars = ft_printf("Character: %c, String: %s, Number: %d, Hex: %x\n", 'A', "test", 255, 255);
+    printed_chars = ft_printf("Char: %c, Str: %s, Num: %d, Hex: %x\n", 'A');
     printf("Printed characters: %d\n\n", printed_chars);
 
     // Ejemplo 4: Usando un puntero con %p
@@ -99,4 +98,3 @@ int main()
 
     return 0;
 }
-

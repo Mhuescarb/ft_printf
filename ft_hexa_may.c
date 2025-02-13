@@ -6,16 +6,15 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 16:14:15 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/12 16:31:05 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/13 12:41:07 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_hexa_may(unsigned long long n, int *count)
-
+void	ft_hexa_may(unsigned long long n, int *count)
 {
-	char *hexchar;
+	char	*hexchar;
 
 	hexchar = "0123456789ABCDEF";
 	if (n >= 16)

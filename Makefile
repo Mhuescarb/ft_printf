@@ -6,7 +6,7 @@
 #    By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/14 11:29:19 by mhuescar          #+#    #+#              #
-#    Updated: 2025/02/12 15:48:51 by mhuescar         ###   ########.fr        #
+#    Updated: 2025/02/13 12:00:45 by mhuescar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ CFLAGS = -Wall -Werror -Wextra
 AR = ar
 ARFLAGS = rcs
 
-SRCS = ft_putchar.c ft_putstr.c ft_hexa_min.c ft_hexa_may.c ft_hexa_point.c\
- ft_putnbr.c ft_unsigned.c ft_printf.c
+SRCS = ft_putchar.c ft_putstr.c ft_hexa_min.c ft_hexa_may.c ft_hexa_point.c \
+ ft_putnbr.c ft_unsigned.c ft_printf.c \
 
 INCLUDE = ft_printf.h
 
