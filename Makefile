@@ -6,14 +6,14 @@
 #    By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/14 11:29:19 by mhuescar          #+#    #+#              #
-#    Updated: 2025/02/13 12:00:45 by mhuescar         ###   ########.fr        #
+#    Updated: 2025/02/14 13:11:07 by mhuescar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 CC = cc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -I$(INCLUDE)
 AR = ar
 ARFLAGS = rcs
 

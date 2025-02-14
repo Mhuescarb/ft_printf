@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:02:13 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/11 15:31:50 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/14 13:39:06 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,20 @@ void	ft_putnbr(int n, int *count)
 }
 /*
  	int main(void)
-
 	{
-
-		int count_ft = 0;
-		int count_printf = 0;
+		int count= 0;
 		int num = 42;  
 	
-		printf("Salida usando ft_putnbr:\n");
-		ft_putnbr(num, &count_ft);
-		printf("\nTotal caracteres impresos con ft_putnbr: %d\n", count_ft);
+		ft_printf("Salida usando ft_putnbr:\n");
+		ft_putnbr(num, &count);
+		ft_printf("\nTotal caracteres impresos con ft_putnbr: %d\n", count);
 		
 		
 		printf("Salida usando printf:\n");
-		count_printf = printf("%d", num); 
-		printf("\nTotal caracteres impresos con printf: %d\n", count_printf);
+		count = printf("%d", num); 
+		printf("\nTotal caracteres impresos con printf: %d\n", count);
 	
 		return 0;
 	}
+		
 */

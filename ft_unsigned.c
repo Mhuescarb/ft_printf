@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 17:03:19 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/11 15:15:40 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/14 13:57:12 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,22 @@ void	ft_unsigned(unsigned int n, int *count)
 	}
 }
 
-/*int main()
+/*
+int main()
 {
     int count = 0;
     unsigned int num = 12345;
 
-	printf("\n Usando ft_printf");
+	
     ft_unsigned(num, &count);
-	printf("/Dígitos escritos: %d\n", count);
+	ft_printf("\nUsando ft_printf");
+	ft_printf("\nDígitos escritos: %d\n", count);
 	
 
 	printf( "\n%u", num);
-	printf(" Usando printf");
+	printf("\nUsando printf");
 
-
-    // Usamos printf para imprimir el contador de caracteres
-    printf("/Dígitos escritos: %d\n", count);
+    printf("\nDígitos escritos: %d\n", count);
 
     return 0;
 }

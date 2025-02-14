@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 15:55:21 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/13 14:36:27 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/14 11:23:35 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,38 +63,31 @@ int	ft_printf(char const *format, ...)
 	return (count);
 }
 
-int main()
+/*int main()
 {
     int printed_chars;
 
-    // Ejemplo 1: Solo texto
-    printed_chars = ft_printf("Hello, world!\n");
+    printed_chars = ft_printf("Text only!\n");
     printf("Printed characters: %d\n\n", printed_chars);
 
-    // Ejemplo 2: Con un especificador de formato %s
-    printed_chars = ft_printf("Hello %s, your balance is %d.\n", "Alice", 100);
+    printed_chars = ft_printf("Hello %s, your balance is %d.\n", "Mara", 100);
     printf("Printed characters: %d\n\n", printed_chars);
 
-    // Ejemplo 3: Con múltiples especificadores de formato
-    printed_chars = ft_printf("Char: %c, Str: %s, Num: %d, Hex: %x\n", 'A');
+    printed_chars = ft_printf("char: %c, string: %s, num: %d, hex: %x\n", 'c');
     printf("Printed characters: %d\n\n", printed_chars);
 
-    // Ejemplo 4: Usando un puntero con %p
     int num = 42;
-    printed_chars = ft_printf("Pointer: %p\n", &num);
+    printed_chars = ft_printf("pointer: %p\n", &num);
     printf("Printed characters: %d\n\n", printed_chars);
 
-    // Ejemplo 5: Porcentaje literal %
     printed_chars = ft_printf("A percentage sign: %%\n");
     printf("Printed characters: %d\n\n", printed_chars);
 
-    // Ejemplo 6: Con %s NULL
     printed_chars = ft_printf(" NULL %s NULL \n", NULL);
     printf("Printed characters: %d\n\n", printed_chars);
 
-    // Ejemplo 7: Con %p 0
     printed_chars = ft_printf("%p %p\n", 0, 0);
     printf("Printed characters: %d\n\n", printed_chars);
 
     return 0;
-}
+}*/

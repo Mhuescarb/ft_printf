@@ -6,7 +6,7 @@
 /*   By: mhuescar <mhuescar@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 10:21:33 by mhuescar          #+#    #+#             */
-/*   Updated: 2025/02/13 11:25:38 by mhuescar         ###   ########.fr       */
+/*   Updated: 2025/02/14 12:41:52 by mhuescar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,21 @@ void	ft_putstr(char *str, int *count)
 	ft_putchar(*str, count);
 	ft_putstr(str + 1, count);
 }
-/* 
+
+/*
 int main (void)
 {
 char *str = "Maricarmen";
 int count = 0;
 
 ft_putstr(str, &count);
-printf("\nSe escribieron %d caracteres.\n", count); 
+ft_printf("\nSe escribieron %d caracteres con ft_printf.\n", count); 
+
+count = 0;
+
+printf("%s", str);
+count += strlen(str); 
+printf("\nSe escribieron %d caracteres con printf.\n", count);
 
 return 0;
 }
